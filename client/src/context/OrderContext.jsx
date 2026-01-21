@@ -8,7 +8,7 @@ export const OrderContext = createContext();
 
 export const useOrders = () => useContext(OrderContext);
 
-const API_URL = 'http://localhost:3000' + '/api';
+const API_URL = import.meta.env.VITE_API_URL + '/api';
 
 export const OrderProvider = ({ children }) => {
     const { goToSoteriaCheckoutPage } = useCart();

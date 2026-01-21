@@ -14,9 +14,9 @@ const reviewRouter = require('./routers/review.router');
 const userRouter = require('./routers/user.router');
 const soteriaRouter = require('./routers/soteria.router');
 
-const rateLimiter = require('express-rate-limit');
-const mongoSanitize = require('express-mongo-sanitize');
-const helmet = require('helmet');
+// const rateLimiter = require('express-rate-limit');
+// const mongoSanitize = require('express-mongo-sanitize');
+// const helmet = require('helmet');
 
 dotenv.config();
 

@@ -7,7 +7,7 @@ export const UserContext = createContext();
 
 export const useUsers = () => useContext(UserContext);
 
-const API_URL = 'http://localhost:3000' + '/api';
+const API_URL = import.meta.env.VITE_API_URL + '/api';
 
 export const UserProvider = ({ children }) => {
     const [users, setUsers] = useState([]);

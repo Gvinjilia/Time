@@ -8,7 +8,7 @@ export const ReviewContext = createContext();
 
 export const useReview = () => useContext(ReviewContext);
 
-const API_URL = 'http://localhost:3000' + '/api';
+const API_URL = import.meta.env.VITE_API_URL + '/api';
 
 export const ReviewProvider = ({ children }) => {
     const { watch } = useWatch();
