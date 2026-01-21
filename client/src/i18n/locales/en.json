@@ -1,0 +1,418 @@
+{
+  "nav": {
+    "home": "Home",
+    "profile": "Profile",
+    "watches": "Watches",
+    "orders": "Orders",
+    "pages": "Pages",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "users": "Users",
+    "cart": "Cart",
+    "logout": "Logout",
+    "signup": "Signup",
+    "login": "Login",
+    "languages": {
+        "en": "English",
+        "ka": "Georgian",
+        "ru": "Russian"
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Be The First To Know",
+      "description": "Discover how to find the best watch and enjoy exclusive products and offers via email",
+      "emailPlaceholder": "Email",
+      "subscribe": "Subscribe"
+    },
+    "address": "1025 Madison Ave, New York, NY 10075",
+    "links": {
+      "home": "Home",
+      "profile": "Profile",
+      "watches": "Watches",
+      "orders": "Orders"
+    },
+    "copyright": "Copyright © {{year}} Time. All rights reserved",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "about": {
+    "heroTitle": "Essential Time",
+    "section1": {
+      "title": "Timeless Watchmaking",
+      "paragraph1": "Watches are more than instruments of time they embody character, precision, and distinction through intelligent design. Since the earliest days of horology, watchmakers have pursued a vision of creating pieces where every detail is considered, every proportion deliberate, and every function purposeful. The result has been a new breed of contemporary timepieces that continue to leave their mark on the industry. Every watch is conceived with care, designed in creative studios around the world, and brought to life by expert craftsmanship.",
+      "paragraph2": "Whether built in Switzerland, Japan, Germany, or beyond, each timepiece reflects a heritage of watchmaking excellence and a commitment to enduring quality."
+    },
+    "section2": {
+      "title": "Time Watches",
+      "description": "Time Watches is a contemporary watch brand dedicated to creating pieces that embody clarity, character, and distinction. The name reflects our purpose: to design watches that honor the essence of time itself. With a focus on intelligent design rather than overt branding, every Time Watch is conceived to be iconic, functional, and enduring."
+    },
+    "section3": {
+      "title": "MORE ABOUT TIME",
+      "description": "Time Watches is dedicated to creating timepieces that combine thoughtful design with lasting quality. Our focus is on clarity, precision, and everyday wearability. Each watch is developed with care, balancing modern aesthetics with functionality, so that it can be worn confidently in any setting.",
+      "button": "SHOP ALL WATCHES"
+    }
+  },
+  "cart": {
+    "heroTitle": "Titanium Body & Quartz Heart",
+    "table": {
+      "product": "Product",
+      "price": "Price",
+      "quantity": "Quantity",
+      "subtotal": "Subtotal"
+    },
+    "buttons": {
+      "order": "Order",
+      "clearCart": "Clear Cart"
+    },
+    "totalPrice": "Total Price",
+    "empty": {
+      "message": "Your cart is currently empty.",
+      "button": "Shop All Products"
+    }
+  },
+  "checkout": {
+    "title": "CHECKOUT",
+    "billingDetails": "BILLING DETAILS",
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "company": "Company (optional)",
+      "paymentMethod": "Payment Method",
+      "street": "Street",
+      "city": "City",
+      "zipCode": "Zip code",
+      "email": "Email",
+      "country": "Country",
+      "orderNotes": "Order notes (optional)",
+      "orderNotesPlaceholder": "Notes about your order, e.g. special notes for delivery."
+    },
+    "subtotal": "SUBTOTAL",
+    "total": "TOTAL",
+    "placeOrder": "Place Order"
+  },
+  "home": {
+    "hero": {
+      "title": "Allow Yourself To Be A Step Ahead",
+      "subtitle": "Choose a watch that expresses your uniqueness",
+      "button": "order now"
+    },
+    "tabs": {
+      "bestSellers": "Best sellers",
+      "newIn": "New In",
+      "sale": "Sale"
+    },
+    "banner": {
+      "text": "Choose a watch that will not only be an integral part of your style but also a sybmol of your unparalleled precision."
+    },
+    "brandsTitle": "Brands We Love",
+    "testimonialsTitle": "Testimonials",
+    "testimonials": {
+      "mark": {
+        "name": "Mark",
+        "text": "I am thrilled with the watch I purchased! The design is exquisite, and it adds a touch of sophistication to my style. Highly recommended!"
+      },
+      "milana": {
+        "name": "Milana",
+        "text": "I love my new watch! It's a perfect blend of style and functionality. The attention to detail is impressive."
+      },
+      "nikolas": {
+        "name": "Nikolas",
+        "text": "Great customer service and an amazing selection of watches! I found the perfect timepiece taht suits my taste and lifestyle. Will definitely be a repeat cutomer."
+      }
+    }
+  },
+  "orders": {
+    "hero": {
+      "featured": "FEATURED WATCHES",
+      "title": "TIMELESS CRAFT",
+      "button": "SHOP ALL WATCHES"
+    },
+    "table": {
+      "orderId": "Order ID",
+      "status": "Status",
+      "payment": "Payment",
+      "total": "Total",
+      "address": "Address",
+      "actions": "Actions"
+    },
+    "updateStatus": {
+      "placeholder": "Enter order status",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "button": "Update Status"
+    }
+  },
+  "profile": {
+    "title": "MY PROFILE",
+    "menu": {
+      "personalDetails": "Personal Details",
+      "settings": "Settings",
+      "permissions": "Access & Permissions"
+    },
+    "location": "Tbilisi, Georgia",
+    "updateButton": "Update Profile Info",
+    "saveChanges": "Save Changes",
+    "cancel": "Cancel",
+    "fields": {
+      "email": "Email",
+      "role": "Role",
+      "password": "Password",
+      "oldPassword": "Enter Old Password",
+      "newPassword": "Enter New Password"
+    },
+    "personalDetailsText": "Your personal details are the foundation of your Time Watches account. They help us identify you, keep your profile secure, and personalize your shopping experience. By keeping your information up to date, you ensure smooth communication, accurate order tracking, and a more tailored browsing experience. Your name allows us to address you properly across the platform and in any communications. Your email is your main point of contact — it's used for login, order confirmations, and important updates about your purchases. Your password protects your account and ensures that only you can access your profile, wishlist, and order history",
+    "settings": {
+      "title": "TIME Watches",
+      "description": "Time Watches is an online store dedicated to timeless and modern timepieces. Our mission is to bring watch enthusiasts and everyday buyers closer to the craftsmanship, style, and precision of luxury and contemporary watches. Through your account, you can update your personal details, track your orders, and manage your preferences. This section is designed to help you keep your information secure and ensure a personalized shopping experience. In the future, you'll also be able to upload a profile picture, verify your email, and enjoy features like language selection and notification settings",
+      "button": "Personal Details"
+    },
+    "permissions": {
+      "title": "ADMIN/MODERATOR",
+      "description": "As an administrator/moderator of Time Watches, you have special permissions to manage key areas of the platform. From here, you can navigate directly to the sections you control. You can oversee user accounts, update product listings, review and process orders, track inventory levels, and configure site settings. This section is designed to give you a clear overview of your responsibilities and quick access to the tools you need to keep the store running smoothly.",
+      "userRoles": "Users role management",
+      "ordersManagement": "Users orders management",
+      "watchesManagement": "Add/Delete/Update Watches",
+      "buttons": {
+        "users": "Users",
+        "orders": "Orders",
+        "shop": "Shop"
+      },
+      "rolesExplanation": {
+        "admin": "A - Admin (can update roles, and delete users)",
+        "moderator": "M - Moderator (can update roles)",
+        "user": "U - User (can only view the website; the \"Users\" page is not visible to them)"
+      }
+    }
+  },
+  "shop": {
+    "heroTitle": "Titanium Body & Quartz Heart",
+    "filters": {
+      "categories": "Categories",
+      "brands": "Brands",
+      "price": "Price"
+    },
+    "watchesCount": "Watches",
+    "noWatches": "No Watches Found",
+    "addWatch": {
+      "title": "Adding Watch",
+      "fields": {
+        "name": "Enter watch name",
+        "category": "Enter watch category",
+        "brand": "Enter watch brand",
+        "price": "Enter watch price",
+        "description": "Enter watch description"
+      },
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "button": "Add Watch"
+    },
+    "actions": {
+      "delete": "Delete",
+      "update": "Update",
+      "save": "Save"
+    }
+  },
+  "usersPage": {
+    "heroTitle": "Users roles management",
+    "title": "USERS",
+    "deleteButton": "Delete user"
+  },
+  "watch": {
+    "addToCart": "Add To Cart",
+    "tabs": {
+      "about": "About This watch",
+      "reviews": "Reviews"
+    },
+    "accordion": {
+      "unique": {
+        "title": "What makes it unique?",
+        "content": "This watch stands apart because it combines timeless craftsmanship with modern innovation. The case is sculpted with precision, the dial is thoughtfully balanced, and the movement inside is engineered for accuracy. Every detail is intentional — from the choice of materials to the way light reflects off the markers. It's not just a functional accessory; it's a statement piece that reflects individuality and taste, designed to be noticed without being loud."
+      },
+      "daily": {
+        "title": "Can it handle daily wear?",
+        "content": "Absolutely. The watch is built to endure the rhythm of everyday life. Its case resists scratches and minor impacts, while the strap is tested for comfort and durability. Moisture, temperature changes, and the occasional bump won't compromise its performance. Whether you're at the office, commuting, or heading outdoors, it's designed to keep pace with your lifestyle while maintaining its refined look. Reliability is woven into its design, so you can wear it with confidence day after day."
+      },
+      "versatile": {
+        "title": "Is it versatile?",
+        "content": "Yes — versatility is one of its strongest qualities. The design transitions seamlessly from formal settings to casual environments, making it suitable for business meetings, social gatherings, or weekend adventures. Its proportions are carefully chosen to complement a wide range of outfits, while its durability ensures it can handle more active moments. This adaptability means you don't need multiple watches for different occasions; one well‑crafted piece can carry you through them all with style and ease."
+      }
+    },
+    "reviews": {
+      "title": "Reviews",
+      "noReviews": "No Reviews on this watch yet...",
+      "addReview": "Add Review",
+      "updateReview": "Update",
+      "deleteReview": "Delete Review",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "fields": {
+        "comment": "Enter Comment on this watch",
+        "name": "Enter Name",
+        "email": "Enter Email"
+      }
+    },
+    "video": {
+      "play": "Play Video"
+    },
+    "story": {
+      "label": "THE STORY",
+      "title": "SUPERIOR FUNCTIONALITY",
+      "description": "With timeless functionality—precise movement, clear dial, and reliable date—its wearer is always in sync with daily life. And with durable materials and refined design, it's a timepiece that balances practicality with enduring style.",
+      "featuresTitle": "FEATURES",
+      "feature1": {
+        "title": "Accurate timekeeping",
+        "description": "with clear dial and date placement."
+      },
+      "feature2": {
+        "title": "Comfortable strap",
+        "description": "with secure clasp for everyday wear."
+      },
+      "feature3": {
+        "title": "Durable case, water‑resistant",
+        "description": "crafted for reliability in varied conditions."
+      },
+      "sections": {
+        "care": "Care & Maintenance",
+        "battery": "Battery & Power",
+        "waterResistance": "Water Resistance",
+        "usage": "Usage & Adjustment"
+      },
+      "warranty": "Every watch is backed by a standard warranty covering manufacturing defects and craftsmanship. For service, adjustments, or repairs, authorized support centers are available to ensure your timepiece continues to perform reliably."
+    },
+    "family": {
+      "label": "THE FAMILY",
+      "title": "TIMEPIECES",
+      "description": "It's simple: precision wrapped in some of the most versatile and refined cases you'll find anywhere. With a thoughtful balance of utility and design on each watch's dial, the Timepieces line adapts to any occasion. It's an uncompromising design for everyday demands, and stylish enough for those who want to look sharp throughout.",
+      "button": "SHOP ALL TIMEPIECES"
+    },
+    "relatedProducts": "Related Products",
+    "noRelated": "No Related Watches"
+  },
+  "contact": {
+    "title": "CONTACT US",
+    "subtitle": "If you have any questions, please send us a message and we will get back to you as soon as possible!",
+    "fields": {
+      "name": "Name",
+      "email": "E-mail",
+      "message": "Message"
+    },
+    "button": "SEND MESSAGE",
+    "success": {
+      "title": "Message Sent",
+      "description": "Thank you for contacting us. We'll get back to you as soon as possible.",
+      "close": "Close"
+    }
+  },
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Welcome back, please enter your details.",
+    "fields": {
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password"
+    },
+    "button": "Login",
+    "google": "Log in with Google",
+    "github": "Log in with Github",
+    "signup": "Dont have an account?",
+    "signupLink": "Signup"
+  },
+  "signup": {
+    "title": "Welcome To TIME WATCHES",
+    "subtitle": "Welcome, please enter your details.",
+    "fields": {
+      "fullname": "Fullname",
+      "fullnamePlaceholder": "Enter your fullname",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password"
+    },
+    "button": "Signup",
+    "google": "Sign in with Google",
+    "github": "Sign in with Github",
+    "login": "Have an account?",
+    "loginLink": "Login"
+  },
+  "admin": {
+    "hero": {
+      "title": "Admin Panel"
+    },
+    "sections": {
+      "users": "Users",
+      "reviews": "Reviews",
+      "orders": "Orders",
+      "watches": "Watches",
+      "profile": "Profile",
+      "overview": "Collection Overview"
+    },
+    "tables": {
+      "columns": {
+        "user": "User",
+        "fullname": "Fullname",
+        "email": "Email",
+        "verified": "Verified",
+        "manageRole": "Manage Role",
+        "deleteUser": "Delete User",
+        "userId": "User Id",
+        "watchId": "Watch Id",
+        "reviewId": "Review Id",
+        "comment": "Comment",
+        "deleteComment": "Delete Comment",
+        "orderId": "Order Id",
+        "status": "Status",
+        "paymentMethod": "Payment Method",
+        "address": "Shipping Address",
+        "totalPrice": "Total Price",
+        "updateStatus": "Update Status",
+        "watch": "Watch",
+        "name": "Name",
+        "brand": "Brand",
+        "category": "Category",
+        "description": "Description",
+        "price": "Price",
+        "updateWatch": "Update Watch",
+        "deleteWatch": "Delete Watch"
+      },
+      "status": {
+        "verified": "Verified",
+        "notVerified": "Not Verified"
+      }
+    },
+    "modals": {
+      "addWatch": {
+        "trigger": "Add New Watch",
+        "title": "Add a new Watch",
+        "description": "Since you are admin you can add the watch."
+      },
+      "updateWatch": {
+        "trigger": "Update",
+        "title": "Update Watch Details",
+        "description": "Since you are admin you can update the watch details.",
+        "save": "Save Changes",
+        "close": "Close"
+      }
+    },
+    "charts": {
+      "revenue": {
+        "title": "Revenue",
+        "description": "This chart tracks the total revenue generated from customer orders, grouped by date. Each point on the line represents the sum of all orders placed on that day, and the shaded area beneath the curve emphasizes the flow of revenue over time. Revenue is the lifeblood of the business. By visualizing it daily, admins can quickly identify patterns such as seasonal spikes, promotional success, or periods of decline. For example, a sudden dip may indicate issues with product availability, marketing reach, or customer satisfaction.",
+        "subtext": "Use this chart to plan marketing campaigns, adjust inventory, and forecast future revenue. It’s also useful for reporting performance to stakeholders."
+      },
+      "prices": {
+        "title": "Watch Prices",
+        "description": "This chart compares the prices of all watches in the catalog, sorted from highest to lowest. Each bar represents a product, making it easy to see which models are positioned as premium versus budget. Pricing strategy directly impacts sales and profitability. Admins need to know whether the catalog is skewed toward high‑end products, balanced across ranges, or concentrated in budget offerings.",
+        "subtext": "Compare this chart with the sales chart to see if expensive watches are selling well. If premium products aren’t moving, consider adjusting marketing or offering discounts. If budget products dominate sales, explore whether higher‑margin items can be promoted more effectively."
+      },
+      "sales": {
+        "title": "Sales",
+        "description": "This chart displays the number of units sold for each watch model. It highlights which products are bestsellers and which are underperforming.",
+        "subtext": "Use this chart to guide inventory management, marketing focus, and product development. Bestsellers should be promoted further, while underperforming products may need discounts, redesign, or removal from the catalog."
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading..."
+  }
+}
