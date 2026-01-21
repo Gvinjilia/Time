@@ -1,5 +1,5 @@
 const Review = require("../models/review.model");
-const AppError = require("../utils/AppError");
+const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
 const getAllReviews = catchAsync(async (req, res, next) => {

@@ -1,6 +1,6 @@
 const axios = require('axios');
 const User = require('../models/user.model');
-const AppError = require('../utils/AppError');
+const AppError = require('../utils/appError');
 
 const GOOGLE_AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth";
 const GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token";

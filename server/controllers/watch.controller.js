@@ -1,5 +1,5 @@
 const Watch = require("../models/watch.model");
-const AppError = require("../utils/AppError");
+const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 const { imageUpload, deleteImage } = require("../utils/image");
 

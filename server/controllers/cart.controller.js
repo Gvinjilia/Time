@@ -1,6 +1,6 @@
 const Cart = require("../models/cart.model");
 const Watch = require("../models/watch.model");
-const AppError = require("../utils/AppError");
+const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
 const getUserCart = catchAsync(async (req, res, next) => {

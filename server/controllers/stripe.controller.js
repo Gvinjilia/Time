@@ -1,6 +1,6 @@
 const Cart = require('../models/cart.model');
 const Order = require('../models/order.model');
-const AppError = require('../utils/AppError');
+const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
