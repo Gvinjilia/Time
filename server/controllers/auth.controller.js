@@ -1,5 +1,5 @@
 const User = require("../models/user.model");
-const AppError = require("../utils/appError.js");
+const AppError = require("../utils/AppError.js");
 const catchAsync = require("../utils/catchAsync");
 const { sendEmail, sendRealGmail } = require("../utils/email");
 
