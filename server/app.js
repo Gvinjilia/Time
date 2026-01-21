@@ -46,7 +46,7 @@ app.use('/api/cart', cartRouter);
 app.use('/api/stripe', stripeRouter);
 app.use('/api/reviews', reviewRouter);
 app.use('/api/users', userRouter);
-app.use('/api/soteria', soteriaRouter);
+// app.use('/api/soteria', soteriaRouter);
 
 app.use(globalErrorHandler);
 

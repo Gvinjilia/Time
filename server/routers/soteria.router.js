@@ -1,10 +1,10 @@
-const express = require('express');
-const { checkoutSession, syncAllWatchesToSoteria } = require('../controllers/soteria.controller');
-const protect = require('../middlewares/auth.middleware');
+// const express = require('express');
+// const { checkoutSession, syncAllWatchesToSoteria } = require('../controllers/soteria.controller');
+// const protect = require('../middlewares/auth.middleware');
 
-const soteriaRouter = express.Router();
+// const soteriaRouter = express.Router();
 
-soteriaRouter.post('/checkout', protect, checkoutSession);
-soteriaRouter.post('/sync-watches', syncAllWatchesToSoteria);
+// soteriaRouter.post('/checkout', protect, checkoutSession);
+// soteriaRouter.post('/sync-watches', syncAllWatchesToSoteria);
 
-module.exports = soteriaRouter;
+// module.exports = soteriaRouter;
