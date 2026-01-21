@@ -13,6 +13,7 @@ const stripeRouter = require('./routers/stripe.router');
 const reviewRouter = require('./routers/review.router');
 const userRouter = require('./routers/user.router');
 const soteriaRouter = require('./routers/soteria.router');
+const path = require('path');
 
 // const rateLimiter = require('express-rate-limit');
 // const mongoSanitize = require('express-mongo-sanitize');
@@ -21,6 +22,12 @@ const soteriaRouter = require('./routers/soteria.router');
 dotenv.config();
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, "dist")));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
 
 app.use(express.json());
 app.use(cookieParser());
