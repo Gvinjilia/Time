@@ -107,7 +107,7 @@ const Checkout = () => {
                         <div className="flex flex-col gap-1">
                             <label htmlFor="paymentMethod">Payment Method</label>
                             <Select onValueChange={setPaymentMethod} id="paymentMethod">
-                                <SelectTrigger>
+                                <SelectTrigger className="w-full md:w-155">
                                     <SelectValue placeholder="Choose Payment Method" />
                                 </SelectTrigger>
                                 <SelectContent>

@@ -183,7 +183,7 @@ const Shop = () => {
                                         <input type="file" multiple name="images" className='mb-2' required />
 
                                         <Select onValueChange={setGender}>
-                                            <SelectTrigger>
+                                            <SelectTrigger className="w-40">
                                                 <SelectValue placeholder="Choose a gender" />
                                             </SelectTrigger>
                                             <SelectContent>
