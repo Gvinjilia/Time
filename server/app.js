@@ -41,7 +41,7 @@ app.use(cookieParser());
 // }));
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: process.env.CLIENT_URL,
     credentials: true
 }));
 
@@ -53,7 +53,7 @@ app.use('/api/cart', cartRouter);
 app.use('/api/stripe', stripeRouter);
 app.use('/api/reviews', reviewRouter);
 app.use('/api/users', userRouter);
-// app.use('/api/soteria', soteriaRouter);
+app.use('/api/soteria', soteriaRouter);
 
 app.use(globalErrorHandler);
 

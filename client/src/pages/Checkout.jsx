@@ -148,7 +148,7 @@ const Checkout = () => {
                         <div className="flex flex-col gap-1 mb-2">
                             <label htmlFor="country">{t('checkout.fields.country')}</label>
                             <Select onValueChange={setCountry} id="country">
-                                <SelectTrigger>
+                                <SelectTrigger className="w-full md:w-155">
                                     <SelectValue placeholder="Choose Country" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -194,7 +194,7 @@ const Checkout = () => {
                             <p className="text-xl font-bold">{cart.total}$</p>
                         </div>
                         <hr className="mb-5" />
-                        <Button className="p-2 w-full md:w-90 rounded-xs font-medium">{t('checkout.placeOrder')}</Button>
+                        <Button type="submit" className="p-2 w-full md:w-90 rounded-xs font-medium">{t('checkout.placeOrder')}</Button>
                     </div>
                 </form>
             </div>

@@ -1,6 +1,6 @@
 import { useContext, createContext, useState, useEffect } from "react";
 import { useAuth } from "./AuthContext";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams, useSearchParams } from "react-router";
 import { toast } from "sonner";
 import { useCart } from "./CartContext";
 
@@ -11,10 +11,25 @@ export const useOrders = () => useContext(OrderContext);
 const API_URL = import.meta.env.VITE_API_URL + '/api';
 
 export const OrderProvider = ({ children }) => {
-    const { goToSoteriaCheckoutPage } = useCart();
+    const { goToSoteriaCheckoutPage, getPaymentStatus } = useCart();
     const [orderHistory, setOrderHistory] = useState([]);
     const [orders, setOrders] = useState([]);
     const { user } = useAuth();
+    const [searchParams] = useSearchParams();
+
+    useEffect(() => {
+        const intentId = searchParams.get('intent');
+
+        const orderData = JSON.parse(sessionStorage.getItem('pendingSoteriaOrder') || '{}');
+
+        if(orderData?.shippingAddress) {
+            getPaymentStatus(intentId, orderData.shippingAddress);
+
+            sessionStorage.removeItem('pendingSoteriaOrder');
+        };
+
+        getUserOrders();
+    }, [searchParams]);
 
     const navigate = useNavigate();
 
@@ -108,8 +123,10 @@ export const OrderProvider = ({ children }) => {
                     throw new Error(data.message);
                 };
                 
+                getUserOrders();
                 window.location.href = data.session_url;
             } else {
+                sessionStorage.setItem('pendingSoteriaOrder', JSON.stringify(formData));
                 goToSoteriaCheckoutPage();
             }
         } catch(err){

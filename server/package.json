@@ -14,6 +14,7 @@
     "cloudinary": "^2.8.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "express-mongo-sanitize": "^2.2.0",
@@ -23,6 +24,7 @@
     "mongoose": "^9.0.2",
     "multer": "^2.0.2",
     "nodemailer": "^7.0.12",
+    "soteria-sdk": "github:giorgigelashvili12/Soteria-SDK",
     "stripe": "^20.1.0",
     "validator": "^13.15.26"
   }

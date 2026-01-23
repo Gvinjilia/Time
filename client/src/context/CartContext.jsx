@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { createContext, useContext, useState } from "react";
 import { toast } from "sonner";
-import { soteria } from 'soteria-sdk';
 
 export const CartContext = createContext();
 
@@ -179,8 +178,39 @@ export const CartProvider = ({ children }) => {
         }
     };
 
+    const getPaymentStatus = async (intentId, shippingAddress) => {
+        const toastId = toast.loading('getting Payment Status...');
+
+        try {
+            const res = await fetch(`${API_URL}/soteria/payment-status/${intentId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ shippingAddress }),
+                credentials: 'include',
+            });
+
+            const data = await res.json();
+
+            if(!res.ok){
+                throw new Error(data.message)
+            };
+
+            toast.success('you have successfully added a watch', {
+                id: toastId,
+                description: 'Now your order will be tracked and arrive to you as soon as possible',
+                duration: 3000
+            });
+        } catch(err){
+            toast.error(`Error: ${err.message}`, {
+                id: toastId
+            });
+        }
+    };
+
     return (
-        <CartContext.Provider value={{addItemToCart, deleteItemFromCart, clearCart, goToCheckout, goToSoteriaCheckoutPage, cart}}>
+        <CartContext.Provider value={{addItemToCart, deleteItemFromCart, clearCart, goToCheckout, goToSoteriaCheckoutPage, getPaymentStatus, cart}}>
           {children}
         </CartContext.Provider>
     );

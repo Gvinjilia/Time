@@ -67,7 +67,7 @@ const confirm = catchAsync(async (req, res, next) => {
     const existingOrder = await Order.findOne({ stripeSessionId: session.id });
     
     if(existingOrder){
-        return res.status(200).json({
+        return res.status(400).json({
             message: 'Order already exists',
             order: existingOrder
         });
