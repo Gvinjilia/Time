@@ -1,7 +1,7 @@
 const User = require("../models/user.model");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
-const { sendEmail, sendRealGmail } = require("../utils/email");
+const sendEmail = require("../utils/email");
 
 const crypto = require('crypto');
 
@@ -43,7 +43,7 @@ const signup = catchAsync(async (req, res, next) => {
 
     const url = `${req.protocol}://${req.get("host")}/api/auth/verify/${code}`;
 
-    sendEmail(email, 'TIME Watches', `
+    await sendEmail(email, 'TIME Watches', `
         <head>
             <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
         </head>
@@ -56,7 +56,7 @@ const signup = catchAsync(async (req, res, next) => {
 
             <button style="background-color: black; width: 500px; padding: 10px; border: none; border-radius: 2px"><a href='${url}' style="text-decoration: none; color: white">Verify Email</a></button></button>
         </div>
-    `)
+    `);
 
     res.status(201).json({
         message: 'account created successfully'
@@ -124,7 +124,7 @@ const forgotPass = catchAsync(async (req, res, next) => {
 
     const reset = process.env.CLIENT_URL + `/reset-password/${token}`;
 
-    await sendRealGmail(user.email, 'TIME Watches',
+    await sendEmail(user.email, 'TIME Watches',
         `<head>
             <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
         </head>

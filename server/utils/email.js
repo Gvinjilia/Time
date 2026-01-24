@@ -1,33 +1,32 @@
-const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
+const nodemailer = require('nodemailer');
 
 dotenv.config();
 
-console.log(process.env.EMAIL_PASSWORD);
-
 const transport = nodemailer.createTransport({
-    host: 'sandbox.smtp.mailtrap.io',
-    port: 2525,
-    auth: {
-        user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD
-    }
-});
-
-const gmailTransport = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: 'smtp-relay.brevo.com',
     port: 587,
     secure: false,
     auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD
+        user: process.env.BREVO_LOGIN,
+        pass: process.env.BREVO_PASS
     }
 });
+
+// const gmailTransport = nodemailer.createTransport({
+//     host: process.env.EMAIL_API,
+//     port: 587,
+//     secure: false,
+//     auth: {
+//         user: process.env.GMAIL_USER,
+//         pass: process.env.GMAIL_APP_PASSWORD
+//     }
+// });
 
 const sendEmail = async (to, subject, html) => {
     try {
         await transport.sendMail({
-            from: '"TIME" <TIME@gmail.com>',
+            from: `"TIME" <gvinjilian2@gmail.com>`,
             to: to,
             subject,
             html
@@ -37,17 +36,17 @@ const sendEmail = async (to, subject, html) => {
     }
 };
 
-const sendRealGmail = async (to, subject, html) => {
-    try {
-        await gmailTransport.sendMail({
-            from: '"TIME" <gvinjilian2@gmail.com>',
-            to,
-            subject,
-            html
-        });
-    } catch(err){
-        console.log(err);
-    }
-}
+// const sendRealGmail = async (to, subject, html) => {
+//     try {
+//         await gmailTransport.sendMail({
+//             from: '"TIME" <gvinjilian2@gmail.com>',
+//             to,
+//             subject,
+//             html
+//         });
+//     } catch(err){
+//         console.log(err);
+//     }
+// };
 
-module.exports = { sendEmail, sendRealGmail };
+module.exports = sendEmail;
