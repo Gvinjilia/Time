@@ -43,18 +43,18 @@ const signup = catchAsync(async (req, res, next) => {
 
     const url = `${req.protocol}://${req.get("host")}/api/auth/verify/${code}`;
 
-    await sendEmail(email, 'TIME Watches', `
+    sendEmail(email, 'TIME Watches', `
         <head>
             <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
         </head>
-        <div style="display: flex; margin-left: 50px; flex-direction: column; gap: 5px">
+        <div style="margin-left: 50px;">
             <div style="width: 500px">
-                <img src="https://tidwatches.com/cdn/shop/files/INS1103.jpg?v=1717037695&width=750" style="height: 200px; width: 500px; object-fit: cover;" />
-                <p style="font-family: 'Major Mono Display', monospace; font-size: 18px;">TIME WATCHES</p>
-                <p style="font-family: 'Roboto', Helvetica, Arial, sans-serif;">Every timepiece that moves through the Time Watches exchange is a testament to material science. We have centered our brand identity around Grade 5 Titanium—a material born in the aerospace industry and perfected for the wrist. Our marketplace prioritizes these builds because they represent the pinnacle of wearable endurance. Titanium is 45% lighter than steel and possesses the highest strength-to-weight ratio of any metal. It is scratch-resistant, hypoallergenic, and impervious to the salt and sweat of an active life. When you buy a "Titanium Body" through our platform, you are investing in a frame that is built to survive the decades.</p>
+                <img src="https://tidwatches.com/cdn/shop/files/INS1103.jpg?v=1717037695&width=750" style="height: 200px; width: 500px; object-fit: cover; margin-bottom: 5px" />
+                <p style="font-family: 'Major Mono Display', monospace; font-size: 18px; margin-bottom: 5px">TIME WATCHES</p>
+                <p style="font-family: 'Roboto', Helvetica, Arial, sans-serif; margin-bottom: 5px">Every timepiece that moves through the Time Watches exchange is a testament to material science. We have centered our brand identity around Grade 5 Titanium—a material born in the aerospace industry and perfected for the wrist. Our marketplace prioritizes these builds because they represent the pinnacle of wearable endurance. Titanium is 45% lighter than steel and possesses the highest strength-to-weight ratio of any metal. It is scratch-resistant, hypoallergenic, and impervious to the salt and sweat of an active life. When you buy a "Titanium Body" through our platform, you are investing in a frame that is built to survive the decades.</p>
             </div>
 
-            <button style="background-color: black; width: 500px; padding: 10px; border: none; border-radius: 2px"><a href='${url}' style="text-decoration: none; color: white">Verify Email</a></button></button>
+            <button style="background-color: black; width: 500px; padding: 10px; border: none; border-radius: 2px"><a href='${url}' style="text-decoration: none; color: white">Verify Email</a></button>
         </div>
     `);
 

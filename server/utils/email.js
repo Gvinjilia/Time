@@ -1,17 +1,21 @@
 const dotenv = require('dotenv');
 const nodemailer = require('nodemailer');
+const brevo = require('@getbrevo/brevo');
 
 dotenv.config();
 
-const transport = nodemailer.createTransport({
-    host: 'smtp-relay.brevo.com',
-    port: 587,
-    secure: false,
-    auth: {
-        user: process.env.BREVO_LOGIN,
-        pass: process.env.BREVO_PASS
-    }
-});
+const instance = new brevo.TransactionalEmailsApi();
+instance.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
+
+// const transport = nodemailer.createTransport({
+//     host: 'smtp-relay.brevo.com',
+//     port: 587,
+//     secure: false,
+//     auth: {
+//         user: process.env.BREVO_LOGIN,
+//         pass: process.env.BREVO_PASS
+//     }
+// });
 
 // const gmailTransport = nodemailer.createTransport({
 //     host: process.env.EMAIL_API,
@@ -25,11 +29,14 @@ const transport = nodemailer.createTransport({
 
 const sendEmail = async (to, subject, html) => {
     try {
-        await transport.sendMail({
-            from: `"TIME" <gvinjilian2@gmail.com>`,
-            to: to,
+        await instance.sendTransacEmail({
+            sender: {
+                name: "TIME Watches",
+                email: "gvinjilian2@gmail.com" 
+            },
+            to: [{ email: to }],
             subject,
-            html
+            htmlContent: html
         });
     } catch(err){
         console.log('Error', err);
