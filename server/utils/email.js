@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
-const nodemailer = require('nodemailer');
 const brevo = require('@getbrevo/brevo');
+// const nodemailer = require('nodemailer');
 
 dotenv.config();
 
@@ -27,6 +27,19 @@ instance.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, process.env.BREVO
 //     }
 // });
 
+// const sendRealGmail = async (to, subject, html) => {
+//     try {
+//         await gmailTransport.sendMail({
+//             from: '"TIME" <gvinjilian2@gmail.com>',
+//             to,
+//             subject,
+//             html
+//         });
+//     } catch(err){
+//         console.log(err);
+//     }
+// };
+
 const sendEmail = async (to, subject, html) => {
     try {
         await instance.sendTransacEmail({
@@ -42,18 +55,5 @@ const sendEmail = async (to, subject, html) => {
         console.log('Error', err);
     }
 };
-
-// const sendRealGmail = async (to, subject, html) => {
-//     try {
-//         await gmailTransport.sendMail({
-//             from: '"TIME" <gvinjilian2@gmail.com>',
-//             to,
-//             subject,
-//             html
-//         });
-//     } catch(err){
-//         console.log(err);
-//     }
-// };
 
 module.exports = sendEmail;

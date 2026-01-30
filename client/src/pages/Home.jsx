@@ -23,13 +23,15 @@ const Home = () => {
     return (
         <>
             <div className='mb-20 relative'>
-                <div className='absolute text-white z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:top-59 lg:left-65 lg:translate-x-0 lg:translate-y-0 flex flex-col items-center lg:items-start text-center lg:text-left gap-7 w-full lg:w-auto px-6 lg:px-0'>
-                    <p style={{ fontFamily: 'var(--font-family, "Noto Serif Georgian", serif)' }} className={`text-4xl md:text-5xl lg:text-7xl w-full ${i18n.language === 'en' ? 'lg:w-150' : 'lg:w-200'}`}>{t('home.hero.title')}</p>
-                    <p style={{ fontFamily: 'var(--font-family, "Noto Serif Georgian", serif)' }} className='text-sm md:text-base'>{t('home.hero.subtitle')}</p>
-                    <button className='border p-2 w-auto min-w-30'>{t('home.hero.button')}</button>
-                </div>
                 <div className='relative overflow-hidden'>
                     <img src={mainImg} className='w-full min-h-100 object-cover lg:object-fill' />
+                    <div className='absolute inset-0 flex items-center justify-center lg:justify-start lg:pl-16 xl:pl-24'>
+                        <div className='flex flex-col items-center lg:items-start text-center lg:text-left gap-7 px-6 lg:px-0 text-white'>
+                            <p style={{ fontFamily: 'var(--font-family, "Noto Serif Georgian", serif)' }} className={`text-4xl md:text-5xl lg:text-7xl w-full ${i18n.language === 'en' ? 'lg:w-150' : 'lg:w-200'}`}>{t('home.hero.title')}</p>
+                            <p style={{ fontFamily: 'var(--font-family, "Noto Serif Georgian", serif)' }} className='text-sm md:text-base'>{t('home.hero.subtitle')}</p>
+                            <button className='border p-2 w-auto min-w-30'>{t('home.hero.button')}</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -44,9 +46,9 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col lg:flex-row mb-25'>
-                <img src={watches} className='w-full lg:w-220 h-80 lg:h-120 object-cover' />
-                <div style={{ backgroundColor: 'var(--background-color, #101010)' }} className='w-full lg:w-250 flex justify-center items-center p-12 lg:p-0'>
+            <div className='flex flex-col lg:flex-row mb-25 w-full'>
+                <img src={watches} className='w-full lg:w-50% h-80 lg:h-120 object-cover' />
+                <div style={{ backgroundColor: 'var(--background-color, #101010)' }} className='w-full lg:w-50% flex justify-center items-center p-12 lg:p-0'>
                     <p className={`text-white w-full ${i18n.language === 'en' ? 'max-w-70' : 'max-w-100'} font-light text-center lg:text-left px-6 lg:px-0`}>{t('home.banner.text')}</p>
                 </div>
             </div>

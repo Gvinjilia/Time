@@ -43,7 +43,7 @@ const signup = catchAsync(async (req, res, next) => {
 
     const url = `${req.protocol}://${req.get("host")}/api/auth/verify/${code}`;
 
-    sendEmail(email, 'TIME Watches', `
+    await sendEmail(email, 'TIME Watches', `
         <head>
             <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
         </head>

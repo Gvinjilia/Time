@@ -90,11 +90,11 @@ const Shop = () => {
     return (
         <>
             <div className='relative'>
-                <div className='absolute top-30 md:top-50 left-10 right-10 z-10'>
-                    <div className='flex justify-center items-center'>
+                <div className='absolute inset-0 flex items-center justify-center px-10 z-10'>
+                    <div className='flex justify-center items-center w-full'>
                         <div className='hidden md:block border-t-3 w-140'></div>
-                        <div className='md:ml-25'>
-                            <p className={`w-full md:${i18n.language === 'en' ? 'w-150' : 'w-180'} text-4xl md:text-[75px] text-white text-center md:text-left`} style={{ fontFamily: 'var(--font-family, "Noto Serif Georgian", serif)' }}>{t('shop.heroTitle')}</p>
+                        <div>
+                            <p className={`w-full md:${i18n.language === 'en' ? 'w-150' : 'w-180'} text-4xl md:text-[75px] text-white text-center`} style={{ fontFamily: 'var(--font-family, "Noto Serif Georgian", serif)' }}>{t('shop.heroTitle')}</p>                        
                         </div>
                         <div className='hidden md:block border-t-3 w-140'></div>
                     </div>

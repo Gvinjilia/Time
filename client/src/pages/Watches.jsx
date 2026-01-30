@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { useWatch } from "../context/WatchContext";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
@@ -12,6 +12,8 @@ const Watches = () => {
     const { user } = useAuth();
     const [page, setPage] = useState(1);
     const navigate = useNavigate();
+
+    const route = useLocation();
 
     if(!user) return <div className="flex justify-center items-center h-screen">
         <Spinner className="w-10 h-10" />
@@ -43,27 +45,31 @@ const Watches = () => {
                     ))
                 }
 
-                <Pagination>
-                    <PaginationContent>
-                        <PaginationItem>
-                            <PaginationPrevious onClick={() => setPage((p) => Math.max(p - 1, 1))} disabled={page === 1} />
-                        </PaginationItem>
+                {
+                    route.pathname !== '/' && (
+                        <Pagination>
+                            <PaginationContent>
+                                <PaginationItem>
+                                    <PaginationPrevious onClick={() => setPage((p) => Math.max(p - 1, 1))} disabled={page === 1} />
+                                </PaginationItem>
 
-                        {[...Array(totalPages)].map((_, index) => (
-                            <PaginationItem key={index}>
-                                <PaginationLink onClick={() => setPage(index + 1)} isActive={page === index + 1}>{index + 1}</PaginationLink>
-                            </PaginationItem>
-                        ))}
+                                {[...Array(totalPages)].map((_, index) => (
+                                    <PaginationItem key={index}>
+                                        <PaginationLink onClick={() => setPage(index + 1)} isActive={page === index + 1}>{index + 1}</PaginationLink>
+                                    </PaginationItem>
+                                ))}
 
-                        {
-                            totalPages >= 4 && <PaginationEllipsis />
-                        }
+                                {
+                                    totalPages >= 4 && <PaginationEllipsis />
+                                }
 
-                        <PaginationItem>
-                            <PaginationNext onClick={() => setPage((p) => Math.min(p + 1, totalPages))} disabled={page === 1} />
-                        </PaginationItem>
-                    </PaginationContent>
-                </Pagination>
+                                <PaginationItem>
+                                    <PaginationNext onClick={() => setPage((p) => Math.min(p + 1, totalPages))} disabled={page === 1} />
+                                </PaginationItem>
+                            </PaginationContent>
+                        </Pagination>
+                    )
+                }
             </div>
         </>
     )
